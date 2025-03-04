@@ -1,50 +1,55 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# EduGraph - Frontend
 
-Currently, two official plugins are available:
+EduGraph is an AI-powered platform designed to help students, researchers, and professionals seamlessly extract, visualize, and interlink topics from multiple PDFs. This enhances knowledge discovery, reduces preparation time, and promotes conceptual clarity through topic mapping.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
+- **Upload PDFs** and extract structured topics.
+- **Visualize topic relationships** using an interactive graph.
+- **Explore interlinked concepts** across multiple sources.
 
-## Expanding the ESLint configuration
+## 📂 Backend Repository
+The backend for EduGraph handles PDF processing, topic extraction, and knowledge graph creation.
+🔗 [EduGraph Backend](https://github.com/uankit/edugraph-backend)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠️ Installation Guide
+### 1️⃣ **Clone the Repository**
+```bash
+git clone https://github.com/uankit/edugraph-frontend.git
+cd edugraph-frontend
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### 2️⃣ **Set Up Environment Variables**
+Create a `.env` file in the root directory and add:
 ```
+VITE_API_BASE_URL=http://localhost:8000/api # Change to deployed backend if applicable
+```
+
+### 3️⃣ **Install Dependencies**
+```bash
+npm install
+```
+
+### 4️⃣ **Run the Application**
+```bash
+npm run dev
+```
+The frontend will now be accessible at `http://localhost:5173/`.
+
+## 🎯 How to Use
+1. Upload a PDF file to extract topics.
+2. View topics and their relationships in the interactive graph.
+3. Click on topics to explore their subtopics and linked concepts.
+
+## 🤝 Contribution & Contact
+EduGraph is an evolving project, and contributions are welcome! If you’re interested in collaborating or have any questions, feel free to reach out.
+
+---
+
+💡 **Looking to collaborate or hire?** EduGraph was built to push boundaries in AI-driven knowledge visualization. Let’s connect! 🚀
+
+
+<img width="1726" alt="image" src="https://github.com/user-attachments/assets/fde6bb64-533c-43e8-b8c2-b3cce8be6882" />
+<img width="1726" alt="image" src="https://github.com/user-attachments/assets/4f3f6592-127c-4b56-b15f-75ba6479fb9d" />
+<img width="1726" alt="image" src="https://github.com/user-attachments/assets/1cb12c46-a49e-4844-9f86-84e63ecf87d3" />
+<img width="1726" alt="image" src="https://github.com/user-attachments/assets/76f8b2e7-1c18-42a4-a890-dd4b82bc6aa5" />
